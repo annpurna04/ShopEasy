@@ -1,70 +1,110 @@
-# Getting Started with Create React App
+# 🛍️ ShopEasy
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![React](https://img.shields.io/badge/React-19-blue)
+![Redux](https://img.shields.io/badge/Redux%20Toolkit-2.0-purple)
+![License](https://img.shields.io/badge/License-MIT-green)
+![GitHub Pages](https://img.shields.io/badge/Deployed-GitHub%20Pages-blue)
 
-## Available Scripts
+ShopEasy is a fully responsive **React-based e-commerce application** with **Redux** for state management, authentication, cart management, and a smooth checkout process.  
+It is deployed on **GitHub Pages** 👉 [Live Demo](https://annpurna04.github.io/ShopEasy)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 🛒 **Add to Cart** – Add, remove, update product quantities  
+- 🔑 **Authentication** – Register & Login using local storage  
+- 👤 **Private Routes** – Checkout & Profile pages accessible only when logged in  
+- 📱 **Responsive Design** – Works on desktop & mobile devices  
+- 🔔 **Toast Notifications** – Feedback for login, cart updates, etc.  
+- 🎨 **Image Slider & Services Section** on the home page  
+- 📂 **Clean Folder Structure** with modular components and pages  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🏗️ Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- ⚛️ React 19  
+- 🛠️ Redux Toolkit  
+- 🌐 React Router v7  
+- 🎭 React Icons  
+- 🎠 React Slick & Slick Carousel (for sliders)  
+- 🔔 React Toastify  
+- 📦 gh-pages (for deployment)  
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📂 Project Structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+src/
+│
+├── components/       # Header, Footer, Slider, PrivateRoute, etc.
+├── pages/            # Products, ProductDetails, Cart, Login, Register, Checkout, Profile
+├── redux/            # authSlice, cartSlice, store configuration
+├── routes/           # AppRoutes.js (all routes are defined here)
+├── App.js            # Root app with BrowserRouter
+├── index.js          # Entry point
+└── styles/           # CSS files
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## ⚡ Installation & Setup
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. **Clone the repo**
+   ```bash
+   git clone https://github.com/annpurna04/ShopEasy.git
+   cd ShopEasy
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. **Run locally**
+   ```bash
+   npm start
+   ```
+   App runs on 👉 [http://localhost:3000](http://localhost:3000)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 🚀 Deployment on GitHub Pages
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Add homepage in `package.json`  
+   ```json
+   "homepage": "https://annpurna04.github.io/ShopEasy"
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. Add deploy scripts in `package.json`
+   ```json
+   "predeploy": "npm run build",
+   "deploy": "gh-pages -d build"
+   ```
 
-### Code Splitting
+3. Deploy  
+   ```bash
+   npm run deploy
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. Enable GitHub Pages in repo settings → **gh-pages branch**
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🔑 Authentication Flow
 
-### Making a Progressive Web App
+- **Register Page** → Saves user in `localStorage`
+- **Login Page** → Validates credentials, saves session in Redux
+- **PrivateRoute** → Protects Checkout & Profile pages
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🤝 Contributing
 
-### Advanced Configuration
+Contributions are welcome! Feel free to open issues and pull requests.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## 📜 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the **MIT License**.
